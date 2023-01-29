@@ -22,3 +22,21 @@ Zjazd 3 pamiętniczku dzisiejszy zjazd był dla mnie najciekawszy najbardziej po
 4. Do czego jest CTRL+C orz czym się różni od CTRL+D oraz jak działa CTRL+Z 
 
 Z każdym kolejnym zjazdem czuje się coral pewniej w linux i chyba czas najwyższy bo za miesiąc kolokwium.
+
+Zjazd4 Pamiętniczku zadania na 4 zjezdzie były fajne aby zrobić sobie powtorke przed kolosem.
+-przypomniałem sobie co to quota
+- Ścieżki wzdledne i bezwzgledne 
+-Ogolnie praktycznie wszytko co było do tej pory
+- jak nadawac uprawnienia itd 
+-czuje sie gotowy na kolosa (ktorego swoja droga udalo mi się zdać)
+
+
+Zjazd 5 Drogi pamiętniczku dziś jest giga stres poniewaz bedzie to moj 1 kolos w zyciu nwm czego ma sie spodziewac ale czuje się gotowy 
+kolos bardzo przyjemny udało się zdać na 17 pkt z 22 
+
+Zjazd 6  oraz zjazd 7 mamy wstęp do poweShell-a już wiem jakie jest to potężne narzędzie ktorym można zrobić mase roznych zadań 
+Orza zacząłem robic robić zadania zgodnie z Pana listą (instrykcją) ale nwm jak je wstawić.
+PS jest bardzo cięzkim tematem ale zadania juz wykonane 
+Wstawione na gita ale bede miec pare pytan do pana po zajeciach 
+PS jest coraz jasniejszy ale duzo pracy jeszcze przedemną 
+I to chyba moj ostatni wpis do notatnika wiec do zobaczenia w przyszłym semestrze.
