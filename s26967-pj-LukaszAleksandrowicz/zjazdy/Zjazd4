@@ -1,0 +1,142 @@
+Rozgrzewka
+Brak uprawnień do zapisu do katalogu domowego plików i katalogów 
+quota czyli skonczyło się miejsce na dysku sprawdzamy to poprzez polecenie quota
+
+
+Zadanie1
+mkdir -p /tmp/ukos/ala/i/as /tmp/ukos/ala/ma/kota /tmp/ukos/kot/ma/ale
+┌──(kali㉿kali)-[~]
+└─$ mkdir -p /tmp/ukos/ala/i/as /tmp/ukos/ala/ma/kota /tmp/ukos/kot/ma/ale
+
+sudo apt install tree
+┌──(kali㉿kali)-[/]
+└─$ sudo apt install tree
+[sudo] password for kali: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+tree is already the newest version (2.0.2-1).
+tree set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+
+tree /tmp/ukos
+┌──(kali㉿kali)-[/]
+└─$ tree /tmp/ukos
+/tmp/ukos
+├── ala
+│   ├── i
+│   │   └── as
+│   └── ma
+│       └── kota
+└── kot
+    └── ma
+        └── ale
+
+8 directories, 0 files
+
+Teraz relatywna 
+tree ../../tmp/ukos
+┌──(kali㉿kali)-[/]
+└─$ tree ../../tmp/ukos
+../../tmp/ukos
+├── ala
+│   ├── i
+│   │   └── as
+│   └── ma
+│       └── kota
+└── kot
+    └── ma
+        └── ale
+
+8 directories, 0 files
+ 
+ 
+cd ../../tmp/ukos/ala/ma/kota
+┌──(kali㉿kali)-[/]
+└─$ 
+cd ../../tmp/ukos/ala/ma/kota
+      
+┌──(kali㉿kali)-[/tmp/ukos/ala/ma/kota]
+└─$ cd ../../                             
+cd ../../ przechodzimy do katalogu ala 
+                                                                             
+┌──(kali㉿kali)-[/tmp/ukos/ala]
+└─$ cd /tmp/ukos/ala   
+
+cd /tmp/ukos/ala bezwgledna
+
+
+
+
+
+2 wykonane mkdir z parametem -p
+-mkdir -p jan/kowalski
+
+
+Zadanie3
+ mv ../../../kot/ma/ale/ /tmp/ukos/ala/i piwerwsza wzgledna druga absolutna
+mv /tmp/ukos/ale ../../ala/i 
+
+
+Zadanie4 
+Wtedy można użyć polecenia kill -9 tak jak było na wykładzie i szukamy pid-a w sposób ps aux | grep i nazwa
+
+Zadanie 5 
+wypisujemy poleceniem -ls -d al*
+
+Zadanie6
+1) tak aby każd mógł do niego wejść
+chmod u=x,g=x,o=x ala 
+chmod u+x,u-rw,g+x,g-rw,o+x,o-rw ala
+chmod 111 ala 
+┌──(kali㉿kali)-[~]
+└─$ chmod 111 ala
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ls -la
+total 152
+drwxr-xr-x 16 kali kali  4096 Dec  4 02:30 .
+drwxr-xr-x  3 root root  4096 Aug  8 06:10 ..
+d--x--x--x  2 kali kali  4096 Dec  4 02:30 ala
+
+
+
+2)Tylko grupa może wyświetlić
+chmod u=wx,g=rwx,o=wx,o-r ala
+chmod u+wx,u-r,g+rwx,o+wx,o-r ala
+chmod 373 ala
+┌──(kali㉿kali)-[~]
+└─$ chmod u=wx,g=rwx,o=wx,o-r ala
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ls -la                       
+total 152
+drwxr-xr-x 16 kali kali  4096 Dec  4 02:30 .
+drwxr-xr-x  3 root root  4096 Aug  8 06:10 ..
+d-wxrwx-wx  2 kali kali  4096 Dec  4 02:30 ala
+
+
+3) Właściciel ma pełne uprawnienia
+chmod u=rwx,go= ala
+chmod u+rwx,go-rwx ala
+chmod 700 ala
+┌──(kali㉿kali)-[~]
+└─$ chmod u+rwx,go-rwx ala
+                                                                             
+┌──(kali㉿kali)-[~]
+└─$ ls -la
+total 152
+drwxr-xr-x 16 kali kali  4096 Dec  4 02:30 .
+drwxr-xr-x  3 root root  4096 Aug  8 06:10 ..
+drwx------  2 kali kali  4096 Dec  4 02:30 ala
+
+
+Zadanie7
+Używamy polecenia ls > elo.txt
+
+Zadanie8
+Klawisz Tab umozliwia nam przyspieszeniewpisywania komend
+
+Zadanie9
+Pierwszy to wpisujemy polecenie następnie wciskamy ctrl+z i olecenie bg
+Drugi po w wpisaniu nazwy progeamu trzeba dopisać &
